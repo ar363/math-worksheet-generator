@@ -244,10 +244,14 @@ def main(calc_type: str, digits: int, question_count: int):
     size_: int = 0
     
     # how many places, 1:0-9, 2:0-99, 3:0-999
-    if digits == "1":
+    if digits == 1:
         size_ = 9
-    elif digits == "3":
+    elif digits == 3:
         size_ = 999
+    elif digits == 4:
+        size_ = 9999
+    elif digits == 5:
+        size_ = 99999
     else:
         size_ = 99
 
