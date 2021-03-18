@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Maths Worksheet Generator</title>
+        <meta
+        name="description"
+        content="Generate math worksheets within miliseconds"
+        />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+        <div class="hero">
+            <h1>Math Worksheet Generator</h1>
+            <p>
+            Create basic addition, subtraction, multiplication and division
+            practice questions with the answer sheet
+            </p>
+            <p>
+            Based on the
+            <a href="https://github.com/januschung/math-worksheet-generator"
+                >Math worksheet generator CLI tool</a
+            >
+            by <a href="https://github.com/januschung/">januschung</a>
+            </p>
+
+            <div class="btn-group">
+            <a class="btn btn--primary" href="#generate">
+                Create one for yourself
+            </a>
+            <a href="" class="btn"> View this project on Github </a>
+            </div>
+        </div>
+
+        <form action="/api/generate" method="GET" id="generate">
+            <div>
+            <label for="qcount">Number of questions (Max: 120)</label>
+            <input
+                type="number"
+                name="qcount"
+                id="qcount"
+                min="1"
+                max="120"
+                value="80"
+                required
+                class="number-input"
+            />
+            </div>
+
+            <div>
+            <label for="digits">Number of digits (1 to 3)</label>
+            <input
+                type="number"
+                name="digits"
+                id="digits"
+                max="3"
+                min="1"
+                value="2"
+                required
+                class="number-input"
+            />
+            </div>
+
+            <fieldset>
+                <legend>Include sums for</legend>
+                <div class="checkbox-group">
+                    <div>
+                    <input type="radio" name="calc_type" id="add" value="+" />
+                    <label for="add">Addition</label>
+                    </div>
+
+                    <div>
+                    <input type="radio" name="calc_type" id="sub" value="-" />
+                    <label for="sub">Subtraction</label>
+                    </div>
+
+                    <div>
+                    <input type="radio" name="calc_type" id="mul" value="x" />
+                    <label for="mul">Multiplication</label>
+                    </div>
+
+                    <div>
+                    <input type="radio" name="calc_type" id="div" value="/" />
+                    <label for="div">Division</label>
+                    </div>
+
+                    <div>
+                    <input
+                        type="radio"
+                        name="calc_type"
+                        id="mix"
+                        value="mix"
+                        checked
+                    />
+                    <label for="mix">Mix of all</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn--primary">Generate</button>
+        </form>
+        </div>
+    </body>
+</html>
