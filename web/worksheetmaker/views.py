@@ -25,7 +25,7 @@ def generate_and_display_worksheet(request):
     if calc_type not in ['+', '-', 'x', '/', 'mix']:
         return HttpResponseBadRequest('calc type can only be +, -, x or /')
 
-    if digits not in [1, 2, 3, 4, 5]:
+    if digits not in [1, 2, 3]:
         return HttpResponseBadRequest('digits can only be 1, 2 or 3')
 
     if question_count > max_question_count or question_count < 1:
