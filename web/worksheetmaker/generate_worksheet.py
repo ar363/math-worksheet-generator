@@ -248,10 +248,6 @@ def main(calc_type: str, digits: int, question_count: int):
         size_ = 9
     elif digits == 3:
         size_ = 999
-    elif digits == 4:
-        size_ = 9999
-    elif digits == 5:
-        size_ = 99999
     else:
         size_ = 99
 
